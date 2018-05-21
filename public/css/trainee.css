@@ -1,0 +1,107 @@
+*, *::before, *::after {
+    outline: none !important;
+}
+table,  th, td {
+  border: 1px solid #878787;
+  border-collapse: collapse;
+}
+table {
+  width: 94%;
+  margin: 30px auto 0px;
+}
+ thead {
+  background-color: #ADD2E4;
+  color: #15366d;
+  text-align: left;
+}
+tr {
+  height: 65px;
+}
+ th, td {
+  padding: 0px 13px;
+  line-height: 65px;
+  position: relative;
+  transition: 0.5s;
+  font-size: 15px;
+}
+.actions a{
+  color: #219BD2;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.actions a:hover{
+  text-decoration: underline;
+  color: #1d7ba6;
+}
+.search_form {
+  width: 94%;
+  margin: auto;
+  position: relative;
+  background: #f0f0f0;
+  padding: 24.5px 13px;
+  border: 1px solid #878787;
+}
+.search input[type="text"] {
+  font-size: 17px;
+  width: 300px;
+}
+.search input[type="text"], .search select {
+  font-size: 17px;
+  vertical-align: middle;
+  height: 45px;
+  padding: 0px 12px;
+  border: 1px solid #878787;
+}
+.ch1 {
+  display: inline-block;
+  position: relative;
+  padding-right: 26px;
+  margin-right: 13px;
+}
+.search input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  cursor: pointer;
+  right: 0px;
+}
+.search label {
+  cursor: pointer;
+}
+.rounded {
+  vertical-align: middle;
+  background-color: #fff;
+  display: inline-block;
+  border: 1px solid #878787;
+  margin-right: 15px;
+}
+
+.styled-select {
+  height: 45px;
+  overflow: hidden;
+  margin-left: 12px;
+}
+
+.search select {
+  background: transparent;
+  border: none;
+  padding: 5px;
+  padding-right: 12px;
+  width: 255px;
+  text-transform: none;
+}
+.search select:focus {
+  border: none;
+}
+.moveToAdd {
+  float: right;
+  background: #3b3b3b;
+  font-size: 15px;
+  height: 45px;
+  color: #fff;
+  cursor: pointer;
+  padding: 0px 12px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  border: 1px solid #878787;
+}

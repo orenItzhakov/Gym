@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <title>Gym</title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="he">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div id="loginBox">
+        <div id="title">
+            <h2>Gym</h2>
+        </div>
+        <form id="usernamePassword" action="homepage.html" method="get" name="f">
+            <div class="inputContainer">
+                <input type="text" class="loginBoxInput" name="username" id="username" placeholder="User Name" autocomplete="off" autofocus="" value="" onchange="localStorage.setItem('userNameVal', document.getElementById('username').value);">
+            </div>
+            <div class="inputContainer">
+                <input type="password" class="loginBoxInput" name="password" id="password" placeholder="Password" autocomplete="off" value="">
+            </div>
+            <div class="inputContainer mid">
+                <input type="checkbox" value="1" name="remember_me">Remember me
+            </div>
+            <div class="inputContainer">
+                <div id="submitButtonContainer">
+                    <input type="submit" value="Login" class="loginButton">
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

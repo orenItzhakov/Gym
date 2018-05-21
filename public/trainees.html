@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <title>Gym</title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="he">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+    <link rel="stylesheet" type="text/css" href="css/trainee.css">
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="addNav"></div>
+    <div class="pages">
+        <div class="page">
+            <h2 class="headline">Trainees</h2>
+            <div class="search_form">
+                <div class="search">
+                    <input type="text" id="myInput" placeholder="Search trainee">
+                    <div class="styled-select rounded">
+                        <select name="selector" title="Search by gender">
+                        <option value="">Gender</option>
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                      </select>
+                    </div>
+                    <button type="button" name="button" onclick="window.location.href = 'addTrainee.html'" class="moveToAdd">Add new trainee</button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Full name</th>
+                        <th>Address</th>
+                        <th>Date start membership</th>
+                        <th>Date end membership</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="trainees">
+
+
+
+                </tbody>
+            </table>
+            <!-- info -->
+            <!-- add user -->
+            <form action="trainees" method="POST" style="display:none;">
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="js/master.js"></script>
+    <script id="trainees-template" type="text/x-handlebars-template">
+      {{#each trainees}}
+        <tr class="trainee" data-id="{{_id}}">
+          <td>{{@index}}</td>
+          <td>{{fullName}}</td>
+          <td>{{address}}</td>
+          <td>{{dateFormat dateMembershipStart}}</td>
+          <td>{{dateFormat dateMembershipEnd}}</td>
+          <td class="actions">
+              <a href="#" class="delete">Delete</a>
+              <a href="#" class="edit">Edit</a>
+          </td>
+        </tr>
+      {{/each}}
+
+    </script>
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="js/trainee-main.js" type="module"></script>
+</body>
+
+</html>

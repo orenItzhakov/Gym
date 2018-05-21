@@ -1,0 +1,36 @@
+.add_trainee {
+  width: 52%;
+  margin: auto;
+  padding: 30px 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.add_trainee .inp{
+  height: auto;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.add_trainee .inp:last-of-type{
+  text-align: center;
+  padding-top: 15px;
+}
+.add_trainee .inp input{
+  font-size: 16px;
+  padding: 8px;
+  width: 250px;
+}
+.add_trainee .inp p{
+  display: inline-block;
+  width: 200px;
+}
+.saveTrainee{
+  background: #3b3b3b;
+  height: 45px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  padding: 0px 22px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  border: 1px solid #878787;
+}
