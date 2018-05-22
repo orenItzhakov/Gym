@@ -1,49 +1,51 @@
 class EventHandler {
 
-    constructor(traineesRenderer, gymRepo) {
-        this.traineesRenderer = traineesRenderer;
-        this.gymRepo = gymRepo;
-    }
+  constructor(traineesRenderer, gymRepo) {
+    this.traineesRenderer = traineesRenderer;
+    this.gymRepo = gymRepo;
+  }
 
+  async handleAddTrainee() {
+    $('.saveTrainee').on('click', () => {
+      var values = {};
+      $('input').each(function() {
+        values[$(this).data('name')] = $(this).val();
+      });
+      this.gymRepo.addTrainee(values).then(()=>{
+        window.location = "trainees.html";
+      });
+    });
+  }
 
-    async handleAddTrainee() {
-        $('.saveTrainee').on('click', () => {
-            const values = {};
-            $('input').each(function() {
-                values[($(this).attr('class')).replace(' hasDatepicker','')] = $(this).val();
-            });
-            this.gymRepo.addTrainee(values);
-            window.location = "trainees.html";
-        })
-    }
+  async handleSaveEditTrainee() {
+    $('.saveTrainee').on('click', () => {
+      var values = {};
+      $('input').each(function() {
+        values[$(this).data('name')] = $(this).val();
+      });
+      this.gymRepo.saveEditTrainee(values).then(()=>{
+        window.location = "trainees.html";
+      });
+    });
+  }
 
+  handleRemoveTrainee() {
+    let insideRepo = this.gymRepo;
+    let insideTraineesRender = this.traineesRenderer;
+    $('.pages').on('click', '.delete', function() {
+      let traineeId = $(this).closest('.trainee').data().id;
+      insideRepo.removeTrainee(traineeId).then((updatedTraineesList) => {
+        insideTraineesRender.renderTrainees(updatedTraineesList);
+      });
+    });
+  }
 
-    handleRenderTrainees() {
-        $('.trainees').on('click', () => {
-            this.gymRepo.getTrainees(() => {
-                this.traineesRenderer.renderTrainees(this.gymRepo.trainees)
-            })
-
-        })
-    }
-
-    handleRemoveTrainee() {
-        let insideRepo = this.gymRepo;
-        let insideTraineesRender = this.traineesRenderer;
-        $('.pages').on('click', '.delete', function() {
-            let traineeId = $(this).closest('.trainee').data().id;
-            insideRepo.removeTrainee(traineeId).then((updatedTraineesList) => {
-                insideTraineesRender.renderTrainees(updatedTraineesList);
-            })
-        })
-    }
-
-    HandleEditTrainee() {
-        let $traineeForm = $(this).closest('.trainee-form') // need to know the way you orginized the html.
-        let traineesId = $traineeForm.data().id
-        this.gymRepo.editTrainee(traineesId, traineeForm);
-    }
+  HandleMoveToEditTraineePage() {
+    $('.pages').on('click', '.edit', function() {
+      let traineeId = $(this).closest('.trainee').data().id;
+      window.location = "editTrainee.html?id="+traineeId;
+    });
+  }
 }
-
 
 export default EventHandler;

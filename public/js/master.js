@@ -27,7 +27,7 @@ class Master{
       this.colorNav();
 
       if(localStorage.getItem('navBarStatus')=="0") this.closeNav(0);
-      
+
       setTimeout(function(){$(".pages").css("transition", "0.5s");}, 800);
     });
   }
@@ -65,6 +65,11 @@ class Master{
     $(".top-bar span").toggle("fast");
     $(".arrow").addClass("arrow-right", time);
     $(".arrow i").addClass("rotate", time);
+  }
+
+  async loadTraineesPage(gymRepo,traineesRenderer){
+    let data = await gymRepo.getTrainees();
+    traineesRenderer.renderTrainees(data);
   }
 }
 

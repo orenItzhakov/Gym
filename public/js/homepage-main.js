@@ -1,8 +1,7 @@
-import GymRepo from './gym-repo.js';
+import gymRepo from './gym-repo.js';
 import HomePageRender from './homePage-renderer.js';
 import Master from './master.js';
 
-let gymRepo = new GymRepo();
 let homePageRender = new HomePageRender();
 let master = new Master();
 

@@ -32,7 +32,7 @@ app.get('/home', function(req, res) {
 app.get('/trainees', function(req, res) {
   Trainee.find({}, function(error, result) {
     if (error) res.send(error);
-    res.send(result);
+    else res.send(result);
   });
 });
 
@@ -40,7 +40,8 @@ app.get('/trainees', function(req, res) {
 app.post('/trainees', function (req, res) {
   var newTrainee = new Trainee(req.body);
   newTrainee.save(function(err,resp) {
-    res.send(resp);
+    if (err) res.send(err);
+    else res.send(resp);
   });
 });
 
@@ -55,18 +56,16 @@ app.delete('/trainees/:id', function(req, res) {
 })
 
 // 4) to handle edit trainee
-
 app.get('/trainee/:id', function(req, res) {
   Trainee.find({ _id: req.params.id }, function(error, result) {
     if (error) res.send(error);
-    res.send(result);
+    else res.send(result);
   });
 });
 
-app.post("/trainees/:id", function(req, res) {
-  let newTraineeForm = new Trainee(req.body)
-  Trainee.findByIdAndUpdate(req.params.id, { $set: { trainees: newTraineeForm } }, function(err, resp) { // we ned to figure out how to make the changes of all field of the form, not just the name.
+app.put("/trainee/:id", function(req, res) {
+  Trainee.update({_id : req.params.id}, req.body , { multi: false }, function(err, resp) { // we ned to figure out how to make the changes of all field of the form, not just the name.
     if (err) throw err;
-    else res.send({ status: "Ok" });
+    else res.send(resp);
   });
 });
