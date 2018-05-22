@@ -14,8 +14,3 @@ getTrainees.then(function(data) {
 });
 
 loadToggleImage()
-
-// eventHandler.handleRenderTrainees();
-// eventHandler.handleAddTrainee();
-// eventHandler.handleRemoveTrainee();
-// eventHandler.HandleEditTrainee();

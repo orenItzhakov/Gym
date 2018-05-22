@@ -2,6 +2,7 @@
   font-family: DroidSerif;
   src: url(fonts/DroidSerif-Regular.ttf);
 }
+
 * {
   margin: 0px;
   padding: 0px;
@@ -12,21 +13,25 @@
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+
 html,body{
   width: 100%;
   height: 100%;
   margin: auto;
   font-family: 'Montserrat', sans-serif;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 h2.headline{
   text-align: center;
   margin: 10px 0px 25px;
   font-size: 22px;
 }
+
 .header {
   position: fixed;
   height: 73px;
@@ -34,14 +39,17 @@ h2.headline{
   width: 100%;
   z-index: 1;
 }
+
 .header-right {
   position: absolute;
   right: 0;
 }
+
 .header-right .item {
   margin: 16px 12px 16px 0px;
   display: inline-block;
 }
+
 .upUser, .upIcon {
   background-color: #3b3b3b;
   border-radius: 100%;
@@ -50,12 +58,14 @@ h2.headline{
   font-size: 30px;
   cursor: pointer;
 }
+
 .header-logo {
   width: 240px;
   height: 100%;
   position: absolute;
   left: 15px;
 }
+
 .header-logo h2 {
   font-family: 'Kaushan Script', cursive;
   font-size: 33px;
@@ -63,6 +73,7 @@ h2.headline{
   top: 50%;
   transform: translateY(-50%);
 }
+
 .top-bar {
   position: fixed;
   width: 283px;
@@ -71,14 +82,17 @@ h2.headline{
   height: calc(100% - 73px);
   background-color: #3b3b3b;
 }
+
 .menu {
   width: 100%;
   color: #fff;
 }
+
 .menu ul {
     padding: 0px;
     margin: 0px;
 }
+
 .menu a:first-child li {
   border-top: 1px solid rgba(0, 0, 0, 0.13);
 }
@@ -91,6 +105,7 @@ h2.headline{
   border-bottom: 1px solid #219BD2;
   transition:0.3s;
 }
+
 .ico {
   font-size: 20px;
   position: absolute;
@@ -98,6 +113,7 @@ h2.headline{
   top: 50%;
   transform: translateY(-50%);
 }
+
 .text-ico {
   position: absolute;
   left: 80px;
@@ -106,25 +122,29 @@ h2.headline{
   font-family: 'Montserrat', sans-serif;
   transform: translateY(-50%);
 }
+
 .arrow {
   position: absolute;
   bottom: 0;
   right: 0;
   cursor: pointer;
 }
+
 .arrow i {
   transition: 0.5s;
   padding: 28px;
   color: #fff;
 }
+
 .pages {
   width: calc(100% - 283px);
   height: calc(100% - 73px);
   position: fixed;
   top: 73px;
-  transition: 0.5s;
+  /* transition: 0.5s; */
   right: 0;
 }
+
 .page {
   background-color: #fff;
   width: 100%;
@@ -147,6 +167,7 @@ h2.headline{
   height: 165px;
   border-radius: 5px;
 }
+
 .userBox::before {
   content: "";
   position: absolute;
@@ -158,21 +179,25 @@ h2.headline{
   border-right: 10px solid transparent;
   border-bottom: 15px solid #ffffff;
 }
+
 .showBox {
   display: block;
 }
+
 .information {
   width: 100%;
   height: 70%;
   overflow: hidden;
   position: relative;
 }
+
 .logoCompany {
   width: 40%;
   height: 100%;
   position: absolute;
   left: 0;
 }
+
 .logoCompany img {
   max-width: 85px;
   position: absolute;
@@ -182,6 +207,7 @@ h2.headline{
   border-radius: 100%;
   box-shadow: 0px 0px 6px black;
 }
+
 .names {
   height: 100%;
   width: 60%;
@@ -189,6 +215,7 @@ h2.headline{
   right: 0;
   padding-right: 15px;
 }
+
 .centerText {
   position: absolute;
   top: 50%;
@@ -196,17 +223,21 @@ h2.headline{
   width: 100%;
   padding-bottom: 15px;
 }
+
 .names span:first-child {
   font-size: 20px;
   display: block;
   color: #000;
 }
+
 .names span {
   font-size: 15px;
 }
+
 .close-top-bar {
   width: calc(100% - 80px);
 }
+
 .rotate {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -214,16 +245,19 @@ h2.headline{
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+
 .arrow-right {
   left: 0px;
   right: auto;
 }
+
 .options {
   width: 100%;
   height: 30%;
   overflow: hidden;
   position: relative;
 }
+
 .options button:first-child {
   left: 0;
   background-color: #315f74;
@@ -241,14 +275,17 @@ h2.headline{
   transition: 0.3s;
   font-family: 'Montserrat', sans-serif;
 }
+
 .options span{
   font-size: 15px;
 }
+
 .options button:last-child {
   background-color: #315f74;
   border-left: 1px solid;
   right: 0;
 }
+
 .options i {
   font-size: 19px;
   padding-bottom: 3px;
@@ -258,5 +295,6 @@ h2.headline{
 .choose,.menu li:hover {
   background: #fff;
   color: #000;
-  border-bottom: 2px solid #219BD2;
+  border-bottom: 2px solid #219BD2!important;
+  width: 282px!important;
 }
