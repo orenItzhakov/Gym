@@ -35,7 +35,11 @@
             if(mm<10) mm='0'+mm;
             trainee[0][key] = mm+'/'+dd+'/'+yyyy;
           }
-          $('[data-name="'+key+'"]').val(trainee[0][key]);
+          if(key != "imagePath") $('[data-name="'+key+'"]').val(trainee[0][key]);
+          else {
+            $('.imgView img').attr("src","imgs/profileImages/"+trainee[0][key]);
+            $('#originalPath').val(trainee[0][key]);
+          }
         }
       }
     }

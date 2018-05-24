@@ -9,6 +9,7 @@ let traineesSchema = new mongoose.Schema({
   dateMedicalAssuranceEnd : Date,
   dateMembershipStart: Date,
   dateMembershipEnd: Date,
+  imagePath: String,
   isActive: Boolean
 });
 

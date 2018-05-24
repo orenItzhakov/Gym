@@ -29,6 +29,9 @@ tr {
   font-weight: bold;
   transition: 0.5s;
 }
+.actions a:first-child{
+  margin-right: 12px;
+}
 .actions a:hover{
   text-decoration: underline;
   color: #1d7ba6;
@@ -41,6 +44,24 @@ tr {
   padding: 24.5px 13px;
   border: 1px solid #878787;
 }
+.searchDiv{
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+.searchDiv i{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  font-size: 19px;
+  color: #a8a8a8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.searchDiv i:hover{
+  color: #666666;
+}
 .search input[type="text"] {
   font-size: 17px;
   width: 300px;
@@ -49,6 +70,7 @@ tr {
   font-size: 17px;
   vertical-align: middle;
   height: 45px;
+  padding: 0px 40px 0px 12px;
   padding: 0px 12px;
   border: 1px solid #878787;
 }

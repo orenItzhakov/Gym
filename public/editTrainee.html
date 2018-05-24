@@ -21,7 +21,14 @@
         <h2 class="headline">Adding Trainee</h2>
         <div class="add_trainee">
           <form>
+            <figure class="imgView">
+              <img src="" alt="">
+              <input type="file" data-name="imagePath" name="imagePath" id="imagePath" accept="image/*">
+              <span>Click to change profile image</span>
+              <div></div>
+            </figure>
             <input type="hidden" data-name="_id">
+            <input type="hidden" data-name="originalPath" id="originalPath">
             <div class="inp">
               <p>Full name</p>
               <input type="text" data-name="fullName">

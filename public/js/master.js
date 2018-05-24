@@ -44,9 +44,9 @@ class Master{
   colorNav(){
     var str = window.location.href;
     var page = str.substring(str.lastIndexOf("/")+1,str.lastIndexOf(".html"));
-    if(page=="homepage") $(".homepageColor").addClass("choose");
-    else if(page=="trainees") $(".traineesColor").addClass("choose");
-    else if(page=="about-us") $(".about-usColor").addClass("choose");
+    if(page == "homepage") $(".homepageColor").addClass("choose");
+    else if(page == "trainees" || page == "addTrainee") $(".traineesColor").addClass("choose");
+    else if(page == "about-us") $(".about-usColor").addClass("choose");
   }
 
   setNameFromLocalStorage(){

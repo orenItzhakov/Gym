@@ -9,10 +9,19 @@ class GymRepo {
   async getTrainees() {
     let result = await $.ajax({
       method: "GET",
-      url: '/trainees',
+      url: '/trainees'
     })
     this.trainees = result;
     return this.trainees
+  }
+
+  async searchTraineesByValues(values) {
+    let result = await $.ajax({
+      method: "POST",
+      url: '/trainees/search',
+      data: values
+    });
+    return result;
   }
 
   async getTrainee() {
@@ -29,17 +38,21 @@ class GymRepo {
     let result = await $.ajax({
       method: "POST",
       url: '/trainees',
+      processData: false,
+      contentType: false,
       data: traineeData
     })
     return result;
   }
 
   async saveEditTrainee(traineeData) {
-    var id = traineeData["_id"];
-    delete traineeData["_id"];
+    var id = traineeData.get("_id");
+    traineeData.delete("_id");
     let result = await $.ajax({
-      method: "PUT",
+      method: "POST",
       url: '/trainee/'+id,
+      processData: false,
+      contentType: false,
       data: traineeData
     })
     return result;
@@ -51,7 +64,6 @@ class GymRepo {
       url: '/trainees/' + traineetId
     })
     .then((data) => {
-      console.log(data)
       return this.trainees = data;
     })
   };

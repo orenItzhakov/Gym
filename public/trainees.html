@@ -20,14 +20,21 @@
         <h2 class="headline">Trainees</h2>
         <div class="search_form">
           <div class="search">
-            <input type="text" id="myInput" placeholder="Search trainee">
-            <div class="styled-select rounded">
+            <div class="searchDiv">
+              <i class="material-icons" title="Clear field">clear</i>
+              <input type="text" id="searchNameVal" placeholder="Search by name...">
+            </div>
+            <div class="searchDiv">
+              <i class="material-icons" title="Clear field">clear</i>
+              <input type="text" id="searchAddressVal" placeholder="Search by address...">
+            </div>
+            <!-- <div class="styled-select rounded">
               <select name="selector" title="Search by gender">
                 <option value="">Gender</option>
                 <option value="">Male</option>
                 <option value="">Female</option>
               </select>
-            </div>
+            </div> -->
             <button type="button" name="button" onclick="window.location.href = 'addTrainee.html'" class="moveToAdd">Add new trainee</button>
           </div>
         </div>

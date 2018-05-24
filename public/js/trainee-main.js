@@ -10,3 +10,5 @@ let master = new Master();
 master.loadTraineesPage(gymRepo,traineesRenderer);
 eventHandler.handleRemoveTrainee();
 eventHandler.HandleMoveToEditTraineePage();
+eventHandler.searchInTable();
+eventHandler.clearInputs();

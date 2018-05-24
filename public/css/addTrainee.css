@@ -1,5 +1,5 @@
 .add_trainee {
-  width: 52%;
+  width: 62%;
   margin: auto;
   padding: 30px 40px;
   border: 1px solid black;
@@ -33,4 +33,60 @@
   letter-spacing: 1px;
   border-radius: 5px;
   border: 1px solid #878787;
+}
+.imgView{
+  float: right;
+  overflow: hidden;
+  width: 170px;
+  border: 1px solid;
+  height: 200px;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+.imgView img{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 100%;z-index:auto;
+  z-index: 2;
+  max-width: 100%;
+}
+figure.imgView input{
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+figure.imgView div{
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: 7;
+  width: 100%;
+  bottom: 0;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+figure.imgView span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 8;
+  font-size: 21px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.5s;
+}
+figure.imgView:hover span,figure.imgView:hover div{
+  opacity: 1;
 }
